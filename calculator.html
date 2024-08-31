@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Class 3 Website</title>
+	<script src="script/jquery.min.js"></script>
+	<script src="script/bootstrap.js"></script>
+	<script src="script/calculator.js"></script>
+	<link href="script/bootstrap.css" rel="stylesheet" />
+	<link href="script/calculator.css" rel="stylesheet" />
+	<link href="img/favicon-c3.png" rel="icon" />
+</head>
+<body class="bg-secondary bg-opacity-10" style="min-width:320px">
+	<header>
+		<nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+				<div class="container-fluid">
+						<a class="navbar-brand" href="index.html">
+								<img src="img/logo-c3.png" alt="logo" class="d-inline-block" style="max-height:3rem">
+								<span class="d-none d-sm-inline-block align-middle">Class 3</span>
+						</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks"><span class="navbar-toggler-icon"></span></button>
+						<div class="collapse navbar-collapse" id="navlinks">
+								<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+										<li class="nav-item"><a class="nav-link" href="practice.html">Practice</a></li>
+										<li class="nav-item"><a class="nav-link" href="calculator.html">BMI Calculator</a></li>
+								</ul>
+						</div>
+				</div>
+		</nav>
+	</header>
+	<!-- Here the main container where students should code -->
+	<article class="min-vh-100">
+		<!-- Page Header -->
+		<div class="container pt-4 py-3">
+			<h1 class="text-center fw-bold display-4">BMI Calculator</h1>
+			<h2 class="text-center fw-normal">Shake your body off</h2>
+		</div>
+		<!-- Leading Text -->
+		<div class="py-3 bg-success bg-opacity-25">
+			<div class="container">
+				<p>Unleash the true potential of your academic journey, amplify your memory, and wave farewell to those persistent kilos with the ultimate game-changer: exercise! Elevate your grades and sculpt your physique hand in hand. Embrace the power of exercise and conquer your academic goals like never before!</p>
+			</div>
+		</div>
+		<!-- Key section -->
+		<div class="py-3 pb-4 container">
+			<ul class="nav nav-tabs nav-pills border-0 justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link rounded-pill active" data-bs-toggle="tab" href="#metric">Metric</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link rounded-pill" data-bs-toggle="tab" href="#imperial">Imperial</a>
+				</li>
+				<!-- Missing an Imperial Tab List. Add a button tab for it -->
+				<!-- The tab-content have an id of imperial -->
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade active show" id="metric">
+					<div class="row gy-3 mt-3 align-items-center">
+						<div class="col col-12 col-sm-4 col-lg-2 text-sm-right">
+							<label class="fw-bold">Height: </label>
+							<!-- Add a form label to guide the user to input for height in meters -->
+							<!-- If you need help, search for `Height (inches)` below -->
+						</div>
+						<div class="col col-12 col-sm-8 col-lg-4">
+							<!-- Height Input -->
+							
+							<!-- Code an input with the id `height-m` and ask the user for it's height. -->
+							<input class="form-control" type="number" for="height" id="height-m"/>
+							<!-- If you need help, find the id `height-i` -->
+						</div>
+						<div class="col col-12 col-sm-4 col-lg-2 text-sm-right">
+							<!-- Weight Label -->
+							<label class="fw-bold">Weight(kg):</label>
+							<!-- Add a form label to guide the user to input for weight in kilograms -->
+							
+							<!-- If you need help, search for `Weight (lbs)` below -->
+						</div>
+						<div class="col col-12 col-sm-8 col-lg-4">
+							<!-- Weight Input -->
+							<!-- Code an input with the id `weight-m` and ask the user for it's weight. -->
+							<!-- If you need help, find the id `weight-i` -->
+							<input class="form-control"  type="number" for="height" id="weight-m"/>
+						</div>
+					</div>
+					<div class="mx-auto text-center py-3">
+						<!-- Code a button -->
+						<button type="button" class="btn btn-primary" onclick="onCalBMIPress()">Calculate</button>
+						<!-- If you need help, search for 'Calculate' below. -->
+					</div>
+				</div>
+				<div class="tab-pane fade" id="imperial">
+					<div class="row gy-3 mt-3 align-items-center">
+						<div class="col col-12 col-sm-4 col-lg-2 text-sm-right"><label class="fw-bold">Height (inches)</label></div>
+						<div class="col col-12 col-sm-8 col-lg-4">
+							<input id="height-i" class="form-control" type="number" placeholder="5.6 in" min="0.1" max="3"></input>
+						</div>
+						<div class="col col-12 col-sm-4 col-lg-2 text-sm-right"><label class="fw-bold">Weight (lbs)</label></div>
+						<div class="col col-12 col-sm-8 col-lg-4">
+							<input id="weight-i" class="form-control" type="number" placeholder="120 lbs" min="0.1" max="200"></input>
+						</div>
+					</div>
+					<div class="mx-auto text-center py-3">
+						<button class="btn btn-primary" type="button" onclick="check('imperial')">Calculate</button>
+					</div>
+				</div>
+			</div>
+			<div class="rounded bg-opacity-25 p-3" id="results"></div>
+			<div class="rounded bg-opacity-25 p-3" id="status"></div>
+		</div>
+	</article>
+	<!-- End of coding region -->
+	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+</html>

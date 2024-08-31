@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+
+<head>
+  <title>Index Page</title>
+  <script src="script/bootstrap.css"></script>
+  <script src="script/bootstrap.js"></script>
+  <script src="script/jquery.min.js"></script>
+  <script src="script/mystyle.css"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand bg-info bg-opacity-25">
+      <div class="container-fluid">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index Website</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page1.html">page 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page2.html">page 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page3.html">Index Website</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <article class="container my-3 mb-4">
+  </article>
+  <footer class="bg-dark bg-opacity-75 text-white">
+    <div class="container pb-4">
+      <p>This is a footer.</p>
+    </div>
+  </footer>
+  <script>
+    let calculateTriangleArea = (base, height) => {
+      let area = 0.5 * base * height;
+      return area;
+    }
+    let areaT1 = calculateTriangleArea(5,4);
+    let areaT2 = calculateTriangleArea(4,7);
+    let areaT3 = calculateTriangleArea(8,8);
+
+    let sum = areaT1 + areaT2 + areaT3;
+    console.log("Total Area: " + sum);
+  </script>
+</body>
+
+</html>

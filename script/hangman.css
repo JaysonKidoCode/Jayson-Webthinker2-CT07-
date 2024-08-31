@@ -1,0 +1,3 @@
+#keyboard { max-width:26em; }
+#keyboard .d-flex>* { width: 10%; max-width:2.5em; }
+#keyboard .d-flex:nth-child(2) { width: 90%; }
