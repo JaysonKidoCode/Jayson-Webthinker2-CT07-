@@ -41,10 +41,20 @@
 
         <button class="btn btn-primary" type ="button">Button 1</button>
         <button class="btn btn-outline-primary" type ="button">Button 2</button>
-
+        
+        <div id="practice"></div>
     </div>
     <!-- End your HTML code here -->
     <script>
+        let timeTable = () => {
+            $("#practice").empty();
+            let getval = parseInt($("#num").val());
+            for(let i = 1; i < getval; i++){
+                $("#practice").append('<p>'+ getval + ' x ' + i +' = '+ (i*getval) +'</p>');
+            }
+        };
+
+
         console.log("Subscribe to Jaymination!")
         const calculateTriangleArea = (base, height) => {
             const area = 0.5 * base * height;
@@ -58,6 +68,12 @@
             return area2;
         }
         console.log(calculateCircleArea(124));
+
+        for(let i = 1; i < 1000000; i++){
+            $("#practice").append('<p>7 x '+  i +' = '+ 7*i +'</p>');
+        
+        }
+           
     </script>
 </body>
 </html>
