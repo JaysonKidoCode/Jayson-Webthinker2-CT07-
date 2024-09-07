@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 3</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <table>
+            
+        </table>
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-primary" type="button" onclick="Add()">Addition</button>
+        <h2 id="history"></h2>
+    </div>
+    <script>
+        let Add = () => {
+            $(".history").empty();
+            while (true){
+                let num1 = Math.floor(Math.random() * 101);
+                let num2 = Math.floor(Math.random() * 101);
+                let userPrompt = parseFloat(prompt('What is the' + num1 + ' + ' + num2 + '2'));
+                if (userPrompt == 0){
+                    break;
+                }
+                $(".history").append('<p>' + num1 + " + " + num2 + " = " + userPrompt + "</p>");
+            }
+            
+        }
+    </script>
+</body>
+</html>
