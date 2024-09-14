@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice HTML</title>
+    <link href="script/bootstrap.css" rel="stylesheet">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <style>
+        /* Add your custom CSS here */
+        .top-left-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="../index.html" class="btn btn-primary top-left-button">Back to Index</a>
+    </div>
+    <br>
+    <!-- Start your HTML code here -->
+    <div class="table">
+        <tr>
+            <th colspan="2">Fruits for sale ;)</th>
+        </tr>
+        <tr></tr>
+            <th>Fruit</th>
+            <th>Unit Price</th>
+        </tr>
+    </div>
+    <div>
+        <th>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </th>
+    </div>
+    <div>
+        <h1 class="text-center">Hello, World!</h1>
+        <p class="text-center">This is an example paragraph. Replace it with your content.</p>
+    </div>
+    <!-- End your HTML code here -->
+    <script>
+        let fruit = ['apple', 'banana', 'mango', 'pineapple'];
+        let fruitPrice = ['$8.00', '$4.00', '$3.00', '$999.09']
+        fruit.pop();
+        fruitPrice.pop();
+        console.log(fruit);
+
+        fruit.shift();
+        fruitPrice.shift();
+        console.log(fruit);
+        
+        fruit.push("feat");
+        fruitPrice.push("$9999999999999999");
+        console.log(fruit);
+
+        fruit.unshift("banana");
+        fruitPrice.unshift("$4.00");
+        console.log(fruit)
+        
+        // pop = remove 
+
+        for(let i =0; i < fruitPrice; i++){
+            console.log("The price of " + fruit[i] + " is " + fruitPrice[i]);
+            $(".table").append('<tr><td>'+fruitPrice[i] + "<td/> <td>" +fruitPrice[i] +" </td> </tr>")
+        }
+
+        console.log(fruit.indexOf("mango"));
+        console.log(fruit.indexOf("banana"));
+        console.log(fruit.indexOf("pineapple"));
+        console.log(fruit.indexOf("apple"));
+
+        console.log("The price of " + fruit[1] + " is " + fruitPrice[1]);
+
+
+    </script>
+</body>
+</html>
