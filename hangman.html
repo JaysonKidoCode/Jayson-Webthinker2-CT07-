@@ -36,9 +36,22 @@
 			<h2 class="text-center fw-normal">Can you guess the word I'm thinking?</h2>
 		</div>
 		<!-- Start of coding region -->
-		
+		 <div class="row">
+			<div class="col">
+				<img src="img/hangman-0.svg" width="450" height="450" alt="hangman">
+			 </div>
+			<div class="col">
+				<div>  <span id="incorrectGuesses">Incorrect Guesses: </span>  </div>
+				<div ><input id="guessInput" type="text" placeholder="enter a letter" maxlength="1"></input></div> 
+				<div><button onclick="submitGuess()">Submit</button></div>
+				<div><button onclick="newGame()">new game</button></div>
+				
+		 </div>
+		 
+		</div>
 		<!-- End of coding region -->
 	</article>
+	<script src="script/hangman.js"></script>
 	<footer class="bg-dark text-light">
 		<div class="container py-2 pb-4">Done by Computhink Kids SG.</div>
 	</footer>
