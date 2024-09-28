@@ -203,4 +203,29 @@ let wordsLength = Words.length
 let idx = Math.floor(Math.random() * wordsLength)
 let word = Words[idx]
 
-alert(word)
+for(let i = 0; i < word.length; i++){
+    if(word[i] == " "){
+        $("#hint").append("<div><space></div>");
+    }
+    else{
+        alert("Get good")
+    }
+
+const submitGuess = () => {
+    let guess = $("#guessInput").val().toUpperCase();
+    if(guess.length = 1 && /^$/.test(guess)){
+        console.log("Validated: " + guess);
+        $("#guessInput").val(' ');
+    }
+    else{
+        console.log("please enter a valid answer.")
+    }
+    }
+}
+
+
+
+
+
+
+  
