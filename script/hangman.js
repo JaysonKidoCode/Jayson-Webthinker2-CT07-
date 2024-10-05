@@ -197,33 +197,63 @@ const Words = ["BRAZIL",
 "CURLING",
 "SAGRADA FAMILIA",
 "CUFANT",
-"BUANGKOK"]
+"BUANGKOK"];
 
-let wordsLength = Words.length
-let idx = Math.floor(Math.random() * wordsLength)
-let word = Words[idx]
+let wordsLength = Words.length;
+let idx = Math.floor(Math.random() * wordsLength);
+let WORD = Words[idx];
+let GUESS = [];
+let INCORRECT_GUESSES = [];
+let LIFE = 7;
 
-for(let i = 0; i < word.length; i++){
-    if(word[i] == " "){
-        $("#hint").append("<div><space></div>");
-    }
-    else{
-        alert("Get good")
-    }
+function UpdateWrongGuess() {
+    $('#incorrectGuesses').html(INCORRECT_GUESSES.join(', '));
+    $('#life').attr("src", `img/hangman-${LIFE}.svg`);
+}
 
-const submitGuess = () => {
-    let guess = $("#guessInput").val().toUpperCase();
-    if(guess.length = 1 && /^$/.test(guess)){
-        console.log("Validated: " + guess);
-        $("#guessInput").val(' ');
-    }
-    else{
-        console.log("please enter a valid answer.")
-    }
+const checkLetter = (key) => {
+	if (GUESS.indexOf(key) == -1) {
+		GUESS.push(key);
+		if (WORD.indexOf(key) != -1) {
+            console.log("Correct Guess!!");
+			$('#hint').html('');
+			for (let i = 0; i < WORD.length; i++) {
+				if (WORD[i] == " ") $('#hint').append(`<div class="fs-4 fw-bold p-3 m-1"> </div>`);
+				else if (GUESS.indexOf(WORD[i]) != -1) $('#hint').append(`<div class="card border-dark fs-4 fw-bold p-3 m-1">${WORD[i]}</div>`);
+				else {
+					$('#hint').append(`<div class="card border-dark fs-4 fw-bold p-3 m-1">_</div>`);
+					found = false;
+				}
+			}
+        }
+        else{
+            INCORRECT_GUESSES.push(key);
+            LIFE -= 1;
+            console.log("WRONG GUESS!!!");
+            UpdateWrongGuess();
+        }
     }
 }
 
+// for(let i = 0; i < word.length; i++){
+//     if(word[i] == " "){
+//         $("#hint").append("<div><space></div>");
+//     }
+//     else{
+//         alert("Get good")
+//     }
 
+const submitGuess = () => {
+    let guess = $("#guessInput").val().toUpperCase();
+    if (guess.length === 1 && /^[A-Z]$/.test(guess)){
+        console.log("Validated: " + guess);
+        checkLetter(guess);
+        $("#guessInput").val('');
+    }
+    else{
+        console.log("please enter a valid letter.")
+    }
+}
 
 
 

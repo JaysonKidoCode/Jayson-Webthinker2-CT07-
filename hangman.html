@@ -36,19 +36,29 @@
 			<h2 class="text-center fw-normal">Can you guess the word I'm thinking?</h2>
 		</div>
 		<!-- Start of coding region -->
-		 <div class="row">
-			<div class="col">
-				<img src="img/hangman-0.svg" width="450" height="450" alt="hangman">
+		 <div id="" class="danger">
+			<div class="row">
+				<div class="col-md-3 d-flex align-items-center justify-content-center mb-3 mb-0">
+					<img id="life" src="img/hangman-7.svg" alt="hangman">
+				</div>
+				<div class="col-md-9">
+					<div class="d-flex justify-content-center flex-wrap" id="hint"></div>
+					<div>
+						<p>Incorrect Guesses: <span id="incorrectGuesses"></span></p>
+					</div>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" type="text" id="guessInput" maxlength="1" placeholder="Enter a letter">
+						<button class="btn btn-primary ml-3" onclick="submitGuess()">Submit</button>
+					</div>
+					<div>
+						<button class="btn btn-primary my-3" onclick="newGame()">New Game</button>
+					</div>
+				</div>
 			 </div>
-			<div class="col">
-				<div>  <span id="incorrectGuesses">Incorrect Guesses: </span>  </div>
-				<div ><input id="guessInput" type="text" placeholder="enter a letter" maxlength="1"></input></div> 
-				<div><button onclick="submitGuess()">Submit</button></div>
-				<div><button onclick="newGame()">new game</button></div>
-				
+			 
+			</div>
 		 </div>
 		 
-		</div>
 		<!-- End of coding region -->
 	</article>
 	<script src="script/hangman.js"></script>
