@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title> Index Page </title>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <script src="script/currency.js"></script>
+    <link href="script/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container my-3">
+      <h1 class="h5"> SGD to MYR Currency Converter </h1>
+      <p> How much Ringgit is... </p>
+      <div id="inputs">
+        <div class="form-floating">
+          <input class="form-control" onkeyup="round()" type="number" id="sgd" placeholder="Singapore Dollar" />
+          <label for="sgd"> Singapore Dollars </label>
+        </div>
+      </div>
+      <div class="my-3">
+        <button type="button" class="btn btn-primary btn-block" onclick="convert()"> Convert to MYR </button>
+      </div>
+      <h2 id="resultHead" class="d-none h6"> Results: </h2>
+      <p id="resultBody" class="d-none">
+        <span id="sgdAmt"> SGD xxx </span> is equivilant to <span class="fw-bold" id="myrAmt"> MYR xxxx </span> .
+      </p>
+    </div>
+  </body>
+</html>
